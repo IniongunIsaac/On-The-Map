@@ -16,10 +16,6 @@ enum AlertType {
 }
 
 class BaseViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     func showLoading(loadingMessage: String) {
         ProgressHUD.colorSpinner(appColor)
@@ -60,6 +56,10 @@ class BaseViewController: UIViewController {
                 }
             })
             .show(on: self)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 
 }

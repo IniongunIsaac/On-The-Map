@@ -27,6 +27,8 @@ class NewStudentLocationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         toggleViewVisibility(viewType: .locationText)
+        locationTextView.delegate = self
+        linkTextView.delegate = self
     }
     
     fileprivate func toggleViewVisibility(viewType: ViewType) {
@@ -106,6 +108,18 @@ class NewStudentLocationViewController: BaseViewController {
     fileprivate func showStudentLocationsViewController() {
         ApiClient.Auth.shouldRefreshData = true
         navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+extension NewStudentLocationViewController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
     
 }

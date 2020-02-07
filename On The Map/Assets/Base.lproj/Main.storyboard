@@ -166,7 +166,12 @@
                         <viewLayoutGuide key="safeArea" id="KL1-FJ-3Xs"/>
                     </view>
                     <navigationItem key="navigationItem" title="On The Map" id="oyh-RB-kGa">
-                        <leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" image="power" catalog="system" id="WhQ-0N-W0U">
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="tZt-zu-730" id="aOT-SI-sY8"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
                             <barButtonItem image="icon_pin" id="fTP-8O-f7E">
                                 <connections>
                                     <action selector="addStudentLocationButtonTapped:" destination="tZt-zu-730" id="5nn-Qr-EwT"/>
@@ -177,12 +182,7 @@
                                     <action selector="refreshLocationsButtonTapped:" destination="tZt-zu-730" id="wFj-dY-v31"/>
                                 </connections>
                             </barButtonItem>
-                        </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" image="power" catalog="system" id="WhQ-0N-W0U">
-                            <connections>
-                                <action selector="logoutButtonTapped:" destination="tZt-zu-730" id="aOT-SI-sY8"/>
-                            </connections>
-                        </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="TGX-oC-DYu" id="x9C-tC-9d8"/>
@@ -215,7 +215,12 @@
                         <viewLayoutGuide key="safeArea" id="T3S-2F-1PI"/>
                     </view>
                     <navigationItem key="navigationItem" title="On The Map" id="ipn-dD-MCr">
-                        <leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" image="power" catalog="system" id="D2Y-WS-r4O">
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="dXO-G5-TkL" id="qqM-kK-jef"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
                             <barButtonItem image="icon_pin" id="RUM-H0-gYt">
                                 <connections>
                                     <action selector="addStudentLocationButtonTapped:" destination="dXO-G5-TkL" id="Ge2-Pv-pgR"/>
@@ -226,12 +231,7 @@
                                     <action selector="refreshLocationsButtonTapped:" destination="dXO-G5-TkL" id="qOL-o9-GJE"/>
                                 </connections>
                             </barButtonItem>
-                        </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" image="power" catalog="system" id="D2Y-WS-r4O">
-                            <connections>
-                                <action selector="logoutButtonTapped:" destination="dXO-G5-TkL" id="qqM-kK-jef"/>
-                            </connections>
-                        </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="7h4-xA-qMQ" id="EoW-tf-zOB"/>
@@ -495,6 +495,6 @@
         <image name="power" catalog="system" width="64" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ltb-nD-Nsc"/>
+        <segue reference="YGw-s2-8DB"/>
     </inferredMetricsTieBreakers>
 </document>
