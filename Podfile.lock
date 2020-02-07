@@ -1,0 +1,20 @@
+PODS:
+  - Alertift (4.1.1)
+  - ProgressHUD (2.70)
+
+DEPENDENCIES:
+  - Alertift (~> 4.1)
+  - ProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - Alertift
+    - ProgressHUD
+
+SPEC CHECKSUMS:
+  Alertift: 950483ca193717cc8bb508a7dbbe34f4af321daf
+  ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
+
+PODFILE CHECKSUM: 23c72736aaccb55b6c5f2312be9c151536db20dd
+
+COCOAPODS: 1.8.4

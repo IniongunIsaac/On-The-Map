@@ -16,8 +16,8 @@ func runOnUIThread(codeToExecute: @escaping () -> Void) {
 
 extension Decodable {
     
-    static func mapFrom(data: Data) throws -> Self? {
+    static func mapFrom(data: Data, shouldSkip: Bool = true) throws -> Self? {
         let decoder = JSONDecoder()
-        return try decoder.decode(Self.self, from: data.subdata(in: 5..<data.count))
+        return shouldSkip ? try decoder.decode(Self.self, from: data.subdata(in: 5..<data.count)) : try decoder.decode(Self.self, from: data)
     }
 }

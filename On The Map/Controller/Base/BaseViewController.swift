@@ -21,10 +21,10 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func showLoading() {
+    func showLoading(loadingMessage: String) {
         ProgressHUD.colorSpinner(appColor)
         ProgressHUD.colorStatus(appColor)
-        ProgressHUD.show("Proccessing Request...")
+        ProgressHUD.show(loadingMessage, interaction: false)
     }
     
     func hideLoading() {
@@ -40,6 +40,24 @@ class BaseViewController: UIViewController {
             .action(.cancel("Dismiss"))
             .finally({ action, index, textfield  in
                 dismissAction()
+            })
+            .show(on: self)
+    }
+    
+    func showAlert(with message: String, alertType: AlertType, dismissText: String = "Dismiss", yesActionText: String = "Okay", yesAction: @escaping () -> Void, dismissAction: @escaping () -> Void) {
+        
+        let alertImage: UIImage? = alertType == .success ? UIImage(named: "success") : UIImage(named: "error")
+
+        Alertift.alert(message: message)
+            .image(alertImage, imageTopMargin: .belowRoundCorner)
+            .action(.cancel(dismissText))
+            .action(.default(yesActionText))
+            .finally({ action, index, textfield  in
+                if action.style == .cancel {
+                    dismissAction()
+                } else {
+                    yesAction()
+                }
             })
             .show(on: self)
     }

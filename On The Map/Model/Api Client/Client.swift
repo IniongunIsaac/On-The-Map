@@ -8,17 +8,19 @@
 
 import Foundation
 
-class Client {
+class NetworkClient {
     
     enum Endpoints {
         
         static let baseUrl = "https://onthemap-api.udacity.com/v1"
         
         case login
+        case studentLocations(String, String)
         
         var stringValue: String {
             switch self {
             case .login: return Endpoints.baseUrl + "/session"
+            case .studentLocations(let limit, let order): return Endpoints.baseUrl + "/StudentLocation?limit=\(limit)&order=\(order)"
             }
         }
         

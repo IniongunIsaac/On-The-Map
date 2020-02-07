@@ -8,7 +8,6 @@ target 'On The Map' do
   # Pods for On The Map
   pod 'ProgressHUD'
   pod 'Alertift', '~> 4.1'
-  pod 'FBSDKLoginKit'
   
 
 end
