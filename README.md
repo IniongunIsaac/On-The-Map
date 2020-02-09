@@ -22,9 +22,9 @@ The application was built using:
 * macOS Catalina 10.15.1
 
 ### Screenshots
-![Login Image](https://github.com/IniongunIsaac/On-The-Map/tree/master/On%20The%20Map/Screenshots/login.png)
-![Map View Image](https://github.com/IniongunIsaac/On-The-Map/tree/master/On%20The%20Map/Screenshots/map.png)
-![List View Image](https://github.com/IniongunIsaac/On-The-Map/tree/master/On%20The%20Map/Screenshots/list.png)
-![Location Image](https://github.com/IniongunIsaac/On-The-Map/tree/master/On%20The%20Map/Screenshots/location_1.png)
-![Location Map Image](https://github.com/IniongunIsaac/On-The-Map/tree/master/On%20The%20Map/Screenshots/location_2.png)
-![Location Added Image](https://github.com/IniongunIsaac/On-The-Map/tree/master/On%20The%20Map/Screenshots/location_3.png)
+![Login Image](https://github.com/IniongunIsaac/On-The-Map/blob/master/On%20The%20Map/Screenshots/login.png)
+![Map View Image](https://github.com/IniongunIsaac/On-The-Map/blob/master/On%20The%20Map/Screenshots/map.png)
+![List View Image](https://github.com/IniongunIsaac/On-The-Map/blob/master/On%20The%20Map/Screenshots/list.png)
+![Location Image](https://github.com/IniongunIsaac/On-The-Map/blob/master/On%20The%20Map/Screenshots/location_1.png)
+![Location Map Image](https://github.com/IniongunIsaac/On-The-Map/blob/master/On%20The%20Map/Screenshots/location_2.png)
+![Location Added Image](https://github.com/IniongunIsaac/On-The-Map/blob/master/On%20The%20Map/Screenshots/location_3.png)
