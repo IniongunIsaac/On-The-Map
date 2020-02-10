@@ -154,14 +154,8 @@ extension MapStudentLocationsViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let url = URL(string: (view.annotation?.subtitle ?? "") ?? "") {
-            
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                showInvalidURLAlert()
-            }
-            
+        if let url = URL(string: (view.annotation?.subtitle ?? "") ?? ""), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
             showInvalidURLAlert()
         }

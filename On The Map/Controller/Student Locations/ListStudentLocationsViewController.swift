@@ -125,14 +125,8 @@ class ListStudentLocationsViewController: BaseViewController, UITableViewDelegat
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if let url = URL(string: StudentLocationModel.studentLocations[indexPath.row].mediaURL) {
-            
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                showInvalidURLAlert()
-            }
-            
+        if let url = URL(string: StudentLocationModel.studentLocations[indexPath.row].mediaURL), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
             showInvalidURLAlert()
         }
